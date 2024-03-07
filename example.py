@@ -60,7 +60,7 @@ def Verification(formula, ts_file):
 def setup_logging():
     fs, dfs = '%(asctime)s %(levelname)s %(message)s', '%m/%d/%Y %I:%M:%S %p'
     loglevel = logging.DEBUG
-    logging.basicConfig(filename='../data/examples_tcs.log', level=loglevel,
+    logging.basicConfig(filename='data/examples_tcs.log', level=loglevel,
                         format=fs, datefmt=dfs)
 
     root = logging.getLogger()
@@ -77,5 +77,5 @@ if __name__ == '__main__':
     phi = '[H^2 A]^[0, 6] * ([H^1 B]^[0, 3] | [H^1 C]^[1, 4]) * [H^1 D]^[0, 6]'
     phi1 = '[H^1 A]^[1, 2]'
     phi2 = '[H^3 !B]^[1, 4]'
-    Verification(phi1, '../data/ts_verification.txt')
-    # case2_verification(phi1,'../data/new.txt')
+    Verification(phi1, 'data/ts_verification.txt')
+    # case2_verification(phi1,'data/new.txt')
